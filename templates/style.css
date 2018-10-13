@@ -1,0 +1,9 @@
+h1 {
+  color: blue;
+  text-align: center;
+}
+
+div {
+  font-family: Arial, sans-serif;
+  border: 3px solid blue;
+}
