@@ -2,26 +2,17 @@
 <html>
   <head>
     <title>My web page </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <!-- <link rel="stylesheet" href="style.css"> -->
   </head>
   <body>
     <div>
       <h1>
-        Welcome to my {{headline}}!
+        Note pad
       </h1>
-        {% if new_year %}
-          <h1>It's new year</h1>
-        {% else %}
-          <h1>no</h1>
-        {% endif %}
-      <form>
-        <input type="text" placeholder="Full Name" name="Name">
-        <button>Submit!</button>
-      </form>
-      <a href="{{ url_for('bye') }}"> see more...</a>
-      <h1> {% block heading %}{% endblock %} </h1>
       {% block body %}
       {% endblock %}
+      <a href="{{ url_for('bye') }}"> see more...</a>
     </div>
   </body>
 </html>
