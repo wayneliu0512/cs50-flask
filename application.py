@@ -9,8 +9,8 @@ Session(app)
 
 @app.route('/', methods=["GET", "POST"])
 def index():
-    if session["notes"] is None:
-        session["notes"] = []
+    # if session["notes"] is None:
+    session["notes"] = []
     if request.method == "POST":
         note = request.form.get("note")
         session["notes"].append(note)
